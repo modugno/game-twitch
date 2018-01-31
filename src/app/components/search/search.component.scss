@@ -1,0 +1,29 @@
+.search-box {
+
+    &__input {
+        position: relative;
+        display: flex;
+        border-radius: 5px;
+        background: #F2F2F4;
+        color: #333;
+
+        &--field {
+            width: calc(100% - 26px);
+            padding: 1em;
+            border: none;
+            background: transparent;
+            outline: none;
+        }
+
+        &--icon {
+            position: absolute;
+            right: 5px;
+            top: 15px;
+        }
+    }
+
+    &__filters {
+        position: relative;
+        margin-top: 1em;
+    }
+}

@@ -1,0 +1,31 @@
+<section class="l-game-list">
+  
+  <app-loader *ngIf="loading"></app-loader>
+  
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2">
+        
+        <app-search 
+          #search 
+          (search)="onSearch(search, $event)"
+          (popularity)="onPopularity($event)"
+          (viewers)="onViewers($event)"
+          ></app-search>
+        
+        <!-- game gallery -->
+        <section class="l-game-list__gallery">
+          <div class="row">
+            <div class="col-4 col-md-3 mt-3" *ngFor="let game of games | filterByName: search.value">
+              <app-thumb (click)="openGame(game)" [thumb]="game.game.box.large" [title]="game.game.name"></app-thumb>
+            </div>
+          </div>
+        </section><!-- end game gallery -->
+        
+        <app-infinite-scroll (scrollcallback)="doInfiniteScroll($event)"></app-infinite-scroll>
+
+      </div>
+    </div>
+  </div>
+</section>

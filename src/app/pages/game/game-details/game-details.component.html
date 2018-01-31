@@ -1,0 +1,34 @@
+<section class="l-game-detail">
+  
+  <app-loader *ngIf="loading"></app-loader>
+  
+  <div class="container-fluid">
+    <!-- header -->
+    <header class="l-game-detail__header">
+      <div class="row">
+        <div class="col-2 col-sm-1 m-game__button--back" (click)="goBack()">
+            <svg fill="#FFFFFF" height="36" viewBox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
+              <path d="M0-.5h24v24H0z" fill="none"/>
+            </svg>
+        </div>
+        <div class="col">
+          <h3>{{game.game.name}}</h3>
+        </div>
+      </div>
+    </header><!-- end header -->
+
+    <!-- <div class="l-game-detail__content" style="background-image: url(https://static-cdn.jtvnw.net/ttv-boxart/Super%20Mario%20Maker-1400x2000.jpg)"> -->
+    <div class="l-game-detail__content">
+      <figure class="m-game__card">
+          <img src="{{ game.game.box.template | fixImgName }}" class="img-fluid">
+          <figcaption class="m-game__caption">
+            <h4 class="m-game__caption--title">{{game.game.name}}</h4>
+            <span class="m-game__caption--info">{{game.viewers | filterDecimal}} visualizações</span>
+            <span class="m-game__caption--info">{{game.channels | filterDecimal}} canais ao vivo</span>
+            <span class="m-game__caption--info">{{game.game.popularity | filterDecimal}} popularidade</span>
+          </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
