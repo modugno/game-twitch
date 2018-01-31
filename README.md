@@ -1,6 +1,7 @@
 # Game Twitch
 Aplicativo baseado na API do Game Twitch
 
+Caso queira ve-lo em produção, [veja uma demo ](https://modugno.github.io/game-twitch/) aqui.
 ### Pre requisitos
 - Node >= 6.10.1
 - Angular 4.4.6
