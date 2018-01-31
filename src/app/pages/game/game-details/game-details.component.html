@@ -1,8 +1,6 @@
 <section class="l-game-detail">
   
-  <app-loader *ngIf="loading"></app-loader>
-  
-  <div class="container-fluid">
+  <div class="container-fluid" *ngIf="game?.game">
     <!-- header -->
     <header class="l-game-detail__header">
       <div class="row">
