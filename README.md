@@ -33,5 +33,3 @@ Para gerar o DIST minificado para produção, em seu terminal rode o seguinte co
 ```cmd
 ng build --prod --aot
 ```
-
-- Guilherme Modugno
